@@ -29,7 +29,7 @@
       <ion-card-subtitle>This is the case where the bug will manifest itself on iOS</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>The map listens to click events after load. When clicking or tapping on the map, the event will not be received and logged in the console. Instead the webview will stop and reload.</p>
+      <p>The map listens to click events. When clicking or tapping on the map, the Mapbox event handler will not be executed, instead Capacitor will output an error.</p>
       <ion-button [routerLink]="'/with-click-event'" color="danger">Go to map page</ion-button>
     </ion-card-content>
   </ion-card>

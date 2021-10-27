@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Capacitor 3 / Mapbox bug (iOS only)
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,29 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Capacitor / Mapbox bug</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Map without click events</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>The map does not listen to click events, you can tap on the map and it does not crash.</p>
+      <ion-button [routerLink]="'/no-click-event'" color="success">Go to map page</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Map with click events</ion-card-title>
+      <ion-card-subtitle>This is the case where the bug will manifest itself on iOS</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>The map listens to click events after load. When clicking or tapping on the map, the event will not be received and logged in the console. Instead the webview will stop and reload.</p>
+      <ion-button [routerLink]="'/with-click-event'" color="danger">Go to map page</ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

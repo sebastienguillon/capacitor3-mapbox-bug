@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'with-click-event',
+    loadChildren: () => import('./with-click-event/with-click-event.module').then( m => m.WithClickEventPageModule)
+  },
+  {
+    path: 'no-click-event',
+    loadChildren: () => import('./no-click-event/no-click-event.module').then( m => m.NoClickEventPageModule)
+  },
 ];
 
 @NgModule({

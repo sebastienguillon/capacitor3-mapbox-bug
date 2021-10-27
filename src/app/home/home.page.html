@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Capacitor 3 / Mapbox bug (iOS only)
+      Capacitor 2 / Mapbox
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,15 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Capacitor / Mapbox bug</ion-title>
+      <ion-title size="large">Capacitor 2 / Mapbox</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card>
+    <ion-card-content>
+      <p><ion-text color="danger">This is the Capacitor v2 version.</ion-text></p>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card>
     <ion-card-header>
@@ -26,10 +32,10 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>Map with click events</ion-card-title>
-      <ion-card-subtitle>This is the case where the bug will manifest itself on iOS</ion-card-subtitle>
+      <ion-card-subtitle>This is the case where the bug would manifest itself on iOS with Capacitor 3</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>The map listens to click events after load. When clicking or tapping on the map, the event will not be received and logged in the console. Instead the webview will stop and reload.</p>
+      <p>The map listens to click events after load. When clicking or tapping on the map, the event will be logged in the console.</p>
       <ion-button [routerLink]="'/with-click-event'" color="danger">Go to map page</ion-button>
     </ion-card-content>
   </ion-card>

@@ -51,11 +51,11 @@ export class WithClickEventPage implements AfterViewInit, OnDestroy {
       });
 
       map.on('click', (ev) => {
-        console.log(`WithClickEventPage map "click" event`, ev);
+        console.log(`WithClickEventPage map "click" event`, JSON.stringify(ev));
       });
 
       map.on('error', (err) => {
-        console.log(`WithClickEventPage map "error" event`, err);
+        console.log(`WithClickEventPage map "error" event`, JSON.stringify(err));
       });
     }
   }
